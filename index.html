@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+		  <a class="navbar-brand LOGO" href="#">OLX</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Location
+				</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="#">Karachi</a></li>
+				  <li><a class="dropdown-item" href="#">Lahore</a></li>
+				  <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item" href="#">Islamabad</a></li>
+				</ul>
+			  </li>
+			
+			</ul>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2 searchbar" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+			<button class="sell-btn btn btn-primary"  type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
+				Sell</button>
+		  </div>
+		</div>
+	  </nav>
+
+	  <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="/assets/f5492d82-1f15-4935-abe9-136b38debbe5.jpg" class="d-block w-100" alt="First slide">
+		  </div>
+		  <div class="carousel-item">
+			<img src="/assets/9851450.jpg" class="d-block w-100" alt="Second slide">
+		  </div>
+		  <div class="carousel-item">
+			<img src="/assets/f5492d82-1f15-4935-abe9-136b38debbe5.jpg" class="d-block w-100" alt="Third slide">
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+
+<!-- modal -->
+	  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+				<center>
+				 Product Form
+				</center>
+			  </h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+					<form id="pform" action="">
+					  <h1 class="heading">Add Product</h1>
+					  <input class="inp" type="text" id="name" placeholder="Enter the Name"><br>
+					  <input class="inp" type="text" id="description" placeholder="Enter the Description"><br>
+					  <input class="inp" type="number" id="price" placeholder="Enter the Price"><br>
+					  <input class="inp" type="file" id="pic" accept="image/*"><br>
+					  <div class="dropdown-container">
+						<label for="categories">Category:</label>
+						<select class="inp" id="categories" name="categories" class="dropdown">
+							<option value="car">Car</option>
+							<option value="mobile">Mobile</option>
+							<option value="furniture">Furniture</option>
+							<option value="electronics">Electronics</option>
+						</select>
+					</div>
+					  <input class="sbtn" id="add-btn" type="button" value="Add Item"><br>
+					</form>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>	
+	  <div class="addshow" id="Product-card">
+		
+	  </div>
+	  <script src="app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
